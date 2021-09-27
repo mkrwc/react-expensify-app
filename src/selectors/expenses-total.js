@@ -1,6 +1,5 @@
-const reducer = (previousValue, currentValue) => previousValue + currentValue;
-
 export default (expenses) => {
-    if (expenses.length === 0) return 0;
-    else return expenses.map(e => e.amount).reduce(reducer);
+  return expenses
+      .map((expense) => expense.amount)
+      .reduce((sum, value) => sum + value, 0);
 };
